@@ -1,0 +1,19 @@
+<!-- src/ui/views/edit/edit.ejs -->
+<%- include('../common/header', { title: 'Modo Edición' }) %>
+
+<section>
+    <h2>Asociar Sonidos a los Botones</h2>
+    <!-- Formulario para asociar archivos MP3 a los botones -->
+    <form action="/edit" method="POST" enctype="multipart/form-data">
+        <% for (let i = 1; i <= 16; i++) { %>
+            <div>
+                <label for="audio<%= i %>">Archivo para Botón <%= i %>:</label>
+                <input type="file" name="audio<%= i %>" accept=".mp3">
+            </div>
+        <% } %>
+        <button class="btn btn-info btn-lg mb-2" type="submit">Guardar Asociaciones</button>
+    </form>
+</section>
+
+<%- include('../common/nav') %>
+<%- include('../common/footer') %>

@@ -1,0 +1,11 @@
+<!-- src/ui/views/common/welcome.ejs -->
+<%- include('header', { title: 'Bienvenido a la Botonera' }) %>
+<div class="row">
+    <div class="col">
+<section>
+    <p>Haz clic en el siguiente botón para comenzar en el modo de ejecución.</p>
+    <button onclick="window.location.href='/execution'" type="button" class="btn btn-info">Ir a Modo Ejecución</button>
+</section>
+</div>
+</div>
+<%- include('footer') %>
